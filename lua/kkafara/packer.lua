@@ -8,5 +8,12 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   -- Custom theme
   use 'folke/tokyonight.nvim'
+
+  use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'hrsh7th/cmp-vsnip'
+  use 'hrsh7th/vim-vsnip'
+  use 'simrat39/rust-tools.nvim'
 end)
 

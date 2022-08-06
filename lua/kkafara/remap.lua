@@ -1,4 +1,4 @@
 local nnoremap = require("kkafara.keymap").nnoremap
 
-nnoremap("<leade>pv", "<cmd>Ex<CR>")
+nnoremap("<leader>pv", "<cmd>Ex<CR>")
 

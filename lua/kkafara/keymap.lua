@@ -1,3 +1,5 @@
+local M = {}
+
 local function bind(op, outer_opts)
   outer_opts = outer_opts or {noremap = true}
   return function(lhs, rhs, opts)
