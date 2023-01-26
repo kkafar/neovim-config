@@ -7,6 +7,9 @@ return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
+  -- TreeSitter
+  use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+
   -- Custom theme
   use 'folke/tokyonight.nvim'
  
