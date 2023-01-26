@@ -1,4 +1,6 @@
-local nnoremap = require("kkafara.keymap").nnoremap
+-- vim.g.mapleader = " "
+-- vim.keymap.set("n", "<leader>pv", vim.cmd().Ex)
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
+local nnoremap = require("kkafara.keymap").nnoremap
+nnoremap("<leader>e", "<cmd>Ex<CR>")
 
