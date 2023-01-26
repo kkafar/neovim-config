@@ -6,6 +6,7 @@ vim.cmd [[packadd packer.nvim]]
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
+
   -- Custom theme
   use 'folke/tokyonight.nvim'
 
@@ -15,5 +16,9 @@ return require('packer').startup(function(use)
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
   use 'simrat39/rust-tools.nvim'
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 end)
 
