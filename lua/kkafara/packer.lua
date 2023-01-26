@@ -9,6 +9,7 @@ return require('packer').startup(function(use)
 
   -- TreeSitter
   use('nvim-treesitter/nvim-treesitter', {run = ':TSUpdate'})
+  use('nvim-treesitter/playground')
 
   -- Custom theme
   use 'folke/tokyonight.nvim'
@@ -21,6 +22,8 @@ return require('packer').startup(function(use)
   --   end
   -- })
 
+
+  use('mbbill/undotree')
 
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp'
