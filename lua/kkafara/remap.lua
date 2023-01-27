@@ -2,7 +2,11 @@
 -- vim.keymap.set("n", "<leader>pv", vim.cmd().Ex)
 
 local nnoremap = require("kkafara.keymap").nnoremap
-nnoremap("<leader>e", "<cmd>Ex<CR>")
+
+-- <leader>f* is reserved for NvimTree
+-- <leader>e the same
+--
+-- <leader>p* is reserved for Telescope
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz");
 vim.keymap.set("n", "<C-u>", "<C-u>zz");
@@ -21,4 +25,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 
 vim.keymap.set("n", "<leader>d", "\"_d")
 vim.keymap.set("v", "<leader>d", "\"_d")
+
+-- "s" for "split"
+vim.keymap.set("n", "<leader>s", "<cmd>vsplit<CR>")
 

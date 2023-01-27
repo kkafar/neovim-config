@@ -13,7 +13,6 @@ return require('packer').startup(function(use)
 
   -- Custom theme
   use 'folke/tokyonight.nvim'
- 
   -- use({
   --   'rose-pine/neovim',
   --   as = 'rose-pine',
@@ -24,6 +23,14 @@ return require('packer').startup(function(use)
 
 
   use('mbbill/undotree')
+
+  use {
+    'nvim-tree/nvim-tree.lua',
+    requires = {
+      'nvim-tree/nvim-web-devicons',
+    },
+    tag = 'nightly'
+  }
 
   use('tpope/vim-fugitive')
 
