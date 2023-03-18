@@ -27,3 +27,5 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 vim.opt.ignorecase = true
 
+vim.opt.timeoutlen = 1000
+
