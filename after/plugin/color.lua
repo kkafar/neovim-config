@@ -1,9 +1,11 @@
 -- Configuration for tokyo-night theme
 vim.g.tokyonight_transparent_sidebar = false
 vim.g.tokyonight_transparent = true
+
 vim.opt.background = "dark"
 
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme tokyonight-day")
+
 
 -- Configuration for rose-pine theme
 -- function ColorMyPencils(color)
