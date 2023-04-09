@@ -2,9 +2,11 @@
 vim.g.tokyonight_transparent_sidebar = false
 vim.g.tokyonight_transparent = true
 
-vim.opt.background = "dark"
-
+vim.opt.background = "light"
 vim.cmd("colorscheme tokyonight-day")
+
+-- vim.opt.background = "dark"
+-- vim.cmd("colorscheme tokyonight-dark")
 
 
 -- Configuration for rose-pine theme
