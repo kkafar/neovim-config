@@ -20,6 +20,19 @@ lsp.configure("clangd", {
   }
 })
 
+lsp.configure("pylsp", {
+  settings = {
+    pylsp = {
+      plugins = {
+        pycodestyle = {
+          ignore = {'W391'},
+          maxLineLength = 90
+        }
+      }
+    }
+  }
+})
+
 local cmp = require("cmp")
 local cmp_select = { behaviour = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
