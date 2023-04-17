@@ -11,16 +11,11 @@ vim.opt.background = "dark"
 vim.cmd("colorscheme tokyonight-moon")
 
 
--- Configuration for rose-pine theme
--- function ColorMyPencils(color)
---   color = color or "rose-pine"
---   vim.cmd.colorscheme(color)
--- 
---   -- 0 means "global space" --> so every window is affected
---   -- "Normal" means "vim" -- why? No one knows 
---   vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
---   vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
--- end
--- 
--- ColorMyPencils()
+local tokyotheme = require("tokyonight")
+tokyotheme.setup({
+  on_colors = function (colors)
+    colors.fg_gutter = "#b2b8cf"
+    colors.fg_dark = "#b2b8cf"
+  end
+})
 
