@@ -67,5 +67,6 @@ return require('packer').startup(function(use)
   }
 
   use 'rstacruz/vim-closer'
+  use 'tpope/vim-endwise'
 end)
 
