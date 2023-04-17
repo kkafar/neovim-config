@@ -5,7 +5,6 @@ lsp.preset("recommended")
 
 -- (Optional) Configure lua language server for neovim
 -- lsp.nvim_workspace()
---
 
 lsp.ensure_installed({
   "tsserver",

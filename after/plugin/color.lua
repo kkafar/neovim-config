@@ -10,7 +10,6 @@ vim.opt.background = "dark"
 -- vim.cmd("colorscheme tokyonight-storm")
 vim.cmd("colorscheme tokyonight-moon")
 
-
 local tokyotheme = require("tokyonight")
 tokyotheme.setup({
   on_colors = function (colors)
