@@ -28,4 +28,5 @@ vim.opt.updatetime = 50
 vim.opt.ignorecase = true
 
 vim.opt.timeoutlen = 1000
+vim.opt.hidden = true
 
