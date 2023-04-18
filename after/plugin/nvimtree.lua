@@ -1,6 +1,7 @@
 require("nvim-tree").setup({
   filters = {
     dotfiles = false,
+    git_clean = false,
   },
   renderer = {
     group_empty = true,
@@ -13,6 +14,9 @@ require("nvim-tree").setup({
     cursorline = true,
     number = true,
     relativenumber = true,
+  },
+  git = {
+    ignore = false, 
   }
 })
 
