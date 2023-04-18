@@ -68,5 +68,10 @@ return require('packer').startup(function(use)
 
   use 'rstacruz/vim-closer'
   use 'tpope/vim-endwise'
+
+  use {
+    'kkafar/nvim-manager',
+    branch = '@kkafar/setup'
+  }
 end)
 
