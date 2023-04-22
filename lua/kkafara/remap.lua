@@ -27,3 +27,6 @@ vim.keymap.set("v", "<leader>d", "\"_d")
 -- "s" for "split"
 vim.keymap.set("n", "<leader>s", "<cmd>vsplit<CR>")
 
+vim.keymap.set("i", "<C-'>", "<Esc>$a")
+vim.keymap.set("i", "<C-;>", "<Esc>^i")
+
