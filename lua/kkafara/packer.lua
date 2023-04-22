@@ -71,7 +71,7 @@ return require('packer').startup(function(use)
 
   use {
     'kkafar/nvim-manager',
-    branch = '@kkafar/setup'
+    branch = 'main'
   }
 end)
 
