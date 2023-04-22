@@ -30,7 +30,6 @@ vim.keymap.set("n", "<leader>s", "<cmd>vsplit<CR>")
 vim.keymap.set("i", "<C-'>", "<Esc>$a")
 vim.keymap.set("i", "<C-;>", "<Esc>^i")
 
-vim.keymap.set("n", "<CR>", "o<Esc>")
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
 
