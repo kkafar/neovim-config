@@ -26,7 +26,12 @@ vim.opt.signcolumn = "yes"
 
 vim.opt.updatetime = 50
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
 vim.opt.timeoutlen = 1000
 vim.opt.hidden = true
+vim.opt.cursorline = true
+
+vim.opt.icon = true
+vim.opt.ruler = true
 
