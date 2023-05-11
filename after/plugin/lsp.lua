@@ -46,6 +46,31 @@ local cmp_mappings = lsp.defaults.cmp_mappings({
 --   virtual_text = true,
 -- })
 
+-- require('lspconfig').rust_analyzer.setup({
+--   settings = {
+--     ['rust-analyzer'] = {
+--       check = {
+--         overrideCommand = {
+--           'cargo', 'clippy', '--workspace', '--message-format=json', '--all-targets', '--all-features'
+--         }
+--       }
+--     }
+--   }
+-- })
+require('lspconfig').rust_analyzer.setup {
+  settings = {
+    ['rust-analyzer'] = {
+      checkOnSave = {
+        allFeatures = true,
+        overrideCommand = {
+          'cargo', 'clippy', '--workspace', '--message-format=json',
+          '--all-targets', '--all-features'
+        }
+      }
+    }
+  }
+}
+
 lsp.setup_nvim_cmp({
   mapping = cmp_mappings
 })
@@ -76,4 +101,3 @@ lsp.setup()
 vim.diagnostic.config({
   virtual_text = true,
 })
-
