@@ -1,12 +1,20 @@
 local builtin = require('telescope.builtin')
+
+-- Lists files in current working directory, respects .gitignore
 vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
+
+-- Uses git ls-files underneath, respects .gitignore, excludes files that are not under VCS
 vim.keymap.set('n', '<C-p>', builtin.git_files, {})
+
 vim.keymap.set('n', '<leader>ps', function()
   builtin.grep_string({ search = vim.fn.input("grep > ") })
 end, {})
-vim.keymap.set('n', '<leader>pg', builtin.grep_string, {})
-vim.keymap.set('n', '<leader>pj', builtin.live_grep, {})
 
+-- Searches for the string under the cursor or selection in cwd
+vim.keymap.set('n', '<leader>pg', builtin.grep_string, {})
+
+-- Searches for a string in cwd, respects .gitignore
+vim.keymap.set('n', '<leader>pj', builtin.live_grep, {})
 
 vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>po', builtin.oldfiles, {})
