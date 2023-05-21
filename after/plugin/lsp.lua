@@ -32,6 +32,16 @@ lsp.configure("pylsp", {
   }
 })
 
+local rt = require("rust-tools");
+
+rt.setup({
+  inlay_hints = {
+    auto = true,
+    only_current_line = false,
+    show_parameter_hints = true,
+  }
+})
+
 local cmp = require("cmp")
 local cmp_select = { behaviour = cmp.SelectBehavior.Select }
 local cmp_mappings = lsp.defaults.cmp_mappings({
@@ -77,6 +87,11 @@ lsp.on_attach(function(client, bufnr)
   vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
   vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
   vim.keymap.set("n", "<leader>vmt", function() vim.lsp.buf.format() end, opts)
+
+  if client.name == "rust_analyzer" then
+    rt.inlay_hints.set()
+    rt.inlay_hints.enable()
+  end
 end)
 
 lsp.setup()
