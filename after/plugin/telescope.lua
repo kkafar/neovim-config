@@ -41,7 +41,7 @@ vim.keymap.set('n', '<leader>lr', builtin.lsp_references, {})
 vim.keymap.set('n', '<leader>lbs', builtin.lsp_document_symbols, {})
 -- List symbols in current workspace (defined by LSP)
 vim.keymap.set('n', '<leader>lws', builtin.lsp_workspace_symbols, {})
--- vim.keymap.set('n', '<leader>ld', builtin.diagnostics, {}) -- requires options!!
+vim.keymap.set('n', '<leader>ld', builtin.diagnostics, {}) -- requires options!!
 
 -- Git pickers
 vim.keymap.set('n', '<leader>pgc', builtin.git_commits, {})
