@@ -11,14 +11,6 @@ return require('packer').startup(function(use)
 
   -- Custom theme
   use 'folke/tokyonight.nvim'
-  -- use({
-  --   'rose-pine/neovim',
-  --   as = 'rose-pine',
-  --   config = function()
-  --     vim.cmd('colorscheme rose-pine')
-  --   end
-  -- })
-
 
   use('mbbill/undotree')
 
@@ -57,6 +49,7 @@ return require('packer').startup(function(use)
 
   use 'hrsh7th/cmp-vsnip'
   use 'hrsh7th/vim-vsnip'
+  use 'hrsh7th/cmp-nvim-lsp-signature-help'
   use 'simrat39/rust-tools.nvim'
 
   use {'numToStr/Comment.nvim'}
@@ -68,12 +61,20 @@ return require('packer').startup(function(use)
 
   use 'rstacruz/vim-closer'
   use 'tpope/vim-endwise'
+  use 'tpope/vim-surround' -- https://github.com/tpope/vim-surround
 
   use 'windwp/nvim-ts-autotag'
+  -- use 'RRethy/vim-illuminate' -- highlites other references for symbol under the cursor (but look ugly)
+
 
   use {
     'kkafar/nvim-manager',
     branch = 'main'
   }
+
+  -- Potential plugins to reconsider
+  -- https://github.com/lukas-reineke/indent-blankline.nvim
+  -- https://github.com/windwp/nvim-autopairs
+  --
 end)
 
