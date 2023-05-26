@@ -69,6 +69,8 @@ return require('packer').startup(function(use)
   use 'rstacruz/vim-closer'
   use 'tpope/vim-endwise'
 
+  use 'windwp/nvim-ts-autotag'
+
   use {
     'kkafar/nvim-manager',
     branch = 'main'
