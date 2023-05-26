@@ -1,0 +1,3 @@
+-- https://github.com/RRethy/vim-illuminate
+-- https://github.com/RRethy/vim-illuminate#configuration
+-- require('illuminate').configure({})
