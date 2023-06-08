@@ -5,6 +5,7 @@
 -- <leader>e the same
 --
 -- <leader>p* is reserved for Telescope
+local options = { remap = false }
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz");
 vim.keymap.set("n", "<C-u>", "<C-u>zz");
@@ -33,4 +34,15 @@ vim.keymap.set("i", "<C-;>", "<Esc>^i")
 
 vim.keymap.set("n", "<leader>o", "o<Esc>")
 vim.keymap.set("n", "<leader>O", "O<Esc>")
+
+vim.keymap.set("i", "<A-h>", "<C-o>h", options)
+vim.keymap.set("i", "<A-j>", "<C-o>j", options)
+vim.keymap.set("i", "<A-k>", "<C-o>k", options)
+vim.keymap.set("i", "<A-l>", "<C-o>l", options)
+vim.keymap.set("i", "<A-w>", "<C-o>w", options)
+vim.keymap.set("i", "<A-e>", "<C-o>e", options)
+vim.keymap.set("i", "<A-b>", "<C-o>b", options)
+vim.keymap.set("i", "<A-B>", "<C-o>B", options)
+vim.keymap.set("i", "<A-E>", "<C-o>E", options)
+vim.keymap.set("i", "<A-W>", "<C-o>W", options)
 
