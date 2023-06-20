@@ -63,7 +63,6 @@ return require('packer').startup(function(use)
   use 'tpope/vim-endwise'
   use 'tpope/vim-surround' -- https://github.com/tpope/vim-surround
   use { 'mg979/vim-visual-multi', branch = 'master' } -- TO LEARN https://github.com/mg979/vim-visual-multi
-  use 'unblevable/quick-scope'
 
   use 'windwp/nvim-ts-autotag'
   -- use 'RRethy/vim-illuminate' -- highlites other references for symbol under the cursor (but look ugly)
