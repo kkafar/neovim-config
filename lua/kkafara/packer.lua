@@ -91,6 +91,10 @@ return require('packer').startup(function(use)
     branch = 'main'
   }
 
+  use {
+    'folke/zen-mode.nvim'
+  }
+
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
 
@@ -98,6 +102,7 @@ return require('packer').startup(function(use)
   -- https://github.com/folke/trouble.nvim
   -- https://github.com/lewis6991/gitsigns.nvim
   -- https://github.com/pwntester/octo.nvim
+  -- https://github.com/ray-x/navigator.lua
 
   -- Potential plugins to reconsider
   -- https://github.com/lukas-reineke/indent-blankline.nvim
