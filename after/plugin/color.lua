@@ -6,6 +6,8 @@ vim.g.tokyonight_transparent = true
 vim.opt.background = "dark"
 
 require("tokyonight").setup({
+  hide_inactive_statusline = true,
+  lualine_bold = true,
   on_colors = function (colors)
     colors.fg_gutter = "#b2b8cf"
     colors.fg_dark = "#b2b8cf"
