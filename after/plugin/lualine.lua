@@ -6,6 +6,7 @@ require('lualine').setup({
     -- theme = 'powerline',
     theme = 'palenight',
     -- theme = 'nightfly',
+    -- theme = 'moonlight',
     component_separators = { left = '', right = '' },
     section_separators = { left = '', right = '' },
     disabled_filetypes = {

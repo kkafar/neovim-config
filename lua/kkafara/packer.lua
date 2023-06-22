@@ -68,6 +68,11 @@ return require('packer').startup(function(use)
   -- Another possible solution
   -- use 'jiangmiao/auto-pairs'
 
+  -- Does not work :( 
+  -- use {
+  --   'm4xshen/autoclose.nvim'
+  -- }
+
 
   use 'tpope/vim-endwise'
   use 'tpope/vim-surround' -- https://github.com/tpope/vim-surround
