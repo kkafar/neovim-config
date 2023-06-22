@@ -55,17 +55,26 @@ return require('packer').startup(function(use)
   use { 'numToStr/Comment.nvim' }
 
   use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    'nvim-telescope/telescope.nvim', tag = '0.1.2',
     requires = { { 'nvim-lua/plenary.nvim' } }
   }
 
-  use 'rstacruz/vim-closer'
+  -- use 'rstacruz/vim-closer'
+  -- My fork with a fix for closing '{' after else / else if
+  use {
+    'kkafar/vim-closer',
+    branch = '@kkafar/attempt-to-fix-bracket-close-after-else'
+  }
+  -- Another possible solution
+  -- use 'jiangmiao/auto-pairs'
+
+
   use 'tpope/vim-endwise'
   use 'tpope/vim-surround' -- https://github.com/tpope/vim-surround
   use { 'mg979/vim-visual-multi', branch = 'master' } -- TO LEARN https://github.com/mg979/vim-visual-multi
 
   use 'windwp/nvim-ts-autotag'
-  -- use 'RRethy/vim-illuminate' -- highlites other references for symbol under the cursor (but look ugly)
+  -- use 'RRethy/vim-illuminate' -- highlites other references for symbol under the cursor (but looks ugly)
   use 'puremourning/vimspector'
 
   use {
@@ -77,14 +86,21 @@ return require('packer').startup(function(use)
     'voldikss/vim-floaterm'
   }
 
-
   use {
     'kkafar/nvim-manager',
     branch = 'main'
   }
 
+  -- Awesome page with lots of plugins
+  -- https://neovimcraft.com/
+
+  -- Plugins to try out
+  -- https://github.com/folke/trouble.nvim
+  -- https://github.com/lewis6991/gitsigns.nvim
+  -- https://github.com/pwntester/octo.nvim
+
   -- Potential plugins to reconsider
   -- https://github.com/lukas-reineke/indent-blankline.nvim
   -- https://github.com/windwp/nvim-autopairs
-  --
+  -- https://github.com/justinmk/vim-sneak
 end)
