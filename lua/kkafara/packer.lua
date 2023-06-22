@@ -95,6 +95,14 @@ return require('packer').startup(function(use)
     'folke/zen-mode.nvim'
   }
 
+  use {
+    'utilyre/barbecue.nvim',
+    requires = {
+      'SmiteshP/nvim-navic'
+    },
+    after = 'nvim-web-devicons'
+  }
+
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
 
@@ -103,6 +111,10 @@ return require('packer').startup(function(use)
   -- https://github.com/lewis6991/gitsigns.nvim
   -- https://github.com/pwntester/octo.nvim
   -- https://github.com/ray-x/navigator.lua
+  -- https://github.com/stevearc/oil.nvim
+  -- https://github.com/kdheepak/lazygit.nvim 
+  -- https://github.com/utilyre/barbecue.nvim
+  -- https://github.com/mrjones2014/smart-splits.nvim
 
   -- Potential plugins to reconsider
   -- https://github.com/lukas-reineke/indent-blankline.nvim
