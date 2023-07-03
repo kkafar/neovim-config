@@ -1,9 +1,8 @@
+-- Plugin spec https://github.com/folke/lazy.nvim#-plugin-spec
 return {
-
   'nvim-treesitter/playground',
 
   -- Custom theme
-  'folke/tokyonight.nvim',
 
   'mbbill/undotree',
 
