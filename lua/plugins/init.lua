@@ -98,11 +98,6 @@ return {
 
   'voldikss/vim-floaterm',
 
-  {
-    'kkafar/nvim-manager',
-    branch = 'main'
-  },
-
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
 
