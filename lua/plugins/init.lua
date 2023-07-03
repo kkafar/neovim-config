@@ -91,11 +91,6 @@ return {
   -- use 'RRethy/vim-illuminate' -- highlites other references for symbol under the cursor (but looks ugly)
   'puremourning/vimspector',
 
-  {
-    'nvim-lualine/lualine.nvim',
-    dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
-  },
-
 
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
