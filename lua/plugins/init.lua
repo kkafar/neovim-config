@@ -96,7 +96,6 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons', opt = true }
   },
 
-  'voldikss/vim-floaterm',
 
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
