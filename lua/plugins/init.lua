@@ -11,10 +11,10 @@ return {
   -- https://github.com/pwntester/octo.nvim
   -- https://github.com/ray-x/navigator.lua
   -- https://github.com/stevearc/oil.nvim
-  -- https://github.com/kdheepak/lazygit.nvim 
+  -- https://github.com/kdheepak/lazygit.nvim
   -- https://github.com/utilyre/barbecue.nvim
   -- https://github.com/mrjones2014/smart-splits.nvim
-  -- 
+  --
   -- From kickstart.nvim
   -- tpope/vim-sleuth
   -- j-hui/fidget.nvim
