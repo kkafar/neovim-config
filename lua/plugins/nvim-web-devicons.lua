@@ -1,6 +1,8 @@
 return {
-  'nvim-web-devicons',
-  dependencies = {
-    'utilyre/barbecue.nvim',
-  }
+  {
+    'nvim-web-devicons',
+    dependencies = {
+      'utilyre/barbecue.nvim',
+    },
+  },
 }
