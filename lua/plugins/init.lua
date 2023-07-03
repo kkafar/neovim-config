@@ -1,12 +1,5 @@
 return {
 
-  {
-    'nvim-web-devicons',
-    dependencies = {
-      'utilyre/barbecue.nvim',
-    }
-  },
-
   'nvim-treesitter/playground',
 
   -- Custom theme
