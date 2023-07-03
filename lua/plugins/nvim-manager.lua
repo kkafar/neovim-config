@@ -1,4 +1,7 @@
 return {
-  'kkafar/nvim-manager',
-  branch = 'main'
+  {
+    'kkafar/nvim-manager',
+    lazy = false,
+    branch = 'main',
+  },
 }

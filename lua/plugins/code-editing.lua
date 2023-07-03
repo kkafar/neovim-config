@@ -1,7 +1,11 @@
 return {
   -- 'hrsh7th/cmp-nvim-lsp-signature-help'
-
-  'numToStr/Comment.nvim',
+  {
+    'numToStr/Comment.nvim',
+    config = function ()
+      require('Comment').setup()
+    end
+  },
   'tpope/vim-endwise',
   'tpope/vim-surround', -- https://github.com/tpope/vim-surround,
   'hrsh7th/cmp-vsnip',
@@ -26,5 +30,10 @@ return {
     branch = 'master'
   }, -- TO LEARN https://github.com/mg979/vim-visual-multi
 
-  'windwp/nvim-ts-autotag',
+  {
+    'windwp/nvim-ts-autotag',
+    config = function()
+      require('nvim-ts-autotag').setup()
+    end
+  }
 }
