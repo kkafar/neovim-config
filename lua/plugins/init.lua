@@ -105,13 +105,6 @@ return {
 
   'folke/zen-mode.nvim',
 
-  {
-    'utilyre/barbecue.nvim',
-    dependencies = {
-      'SmiteshP/nvim-navic'
-    },
-  },
-
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
 
