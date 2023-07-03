@@ -103,8 +103,6 @@ return {
     branch = 'main'
   },
 
-  'folke/zen-mode.nvim',
-
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
 
