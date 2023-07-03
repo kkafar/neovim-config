@@ -15,6 +15,8 @@ vim.keymap.set('n', '<leader>pg', builtin.grep_string, {})
 
 -- Searches for a string in cwd, respects .gitignore
 vim.keymap.set('n', '<leader>pj', builtin.live_grep, {})
+vim.keymap.set('n', '<leader>pn', builtin.current_buffer_fuzzy_find, {})
+vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, {})
 
 vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>po', builtin.oldfiles, {})
@@ -30,7 +32,6 @@ vim.keymap.set('n', '<leader>pl', builtin.jumplist, {})
 
 vim.keymap.set('n', '<leader>vo', builtin.vim_options, {})
 vim.keymap.set('n', '<leader>pr', builtin.registers, {})
-vim.keymap.set('n', '<leader>pn', builtin.current_buffer_fuzzy_find, {})
 
 
 -- Pickers from Neovim LSP
