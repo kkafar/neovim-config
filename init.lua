@@ -3,7 +3,6 @@
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
-require("config")
 
 -- Bootstarp lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -19,5 +18,8 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("plugins")
+require("config")
+require("lazy").setup("plugins")
+
+-- require("plugins")
 
