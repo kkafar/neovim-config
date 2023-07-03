@@ -120,6 +120,10 @@ return require('packer').startup(function(use)
   -- https://github.com/kdheepak/lazygit.nvim 
   -- https://github.com/utilyre/barbecue.nvim
   -- https://github.com/mrjones2014/smart-splits.nvim
+  -- 
+  -- From kickstart.nvim
+  -- tpope/vim-sleuth
+  -- j-hui/fidget.nvim
 
   -- Potential plugins to reconsider
   -- https://github.com/lukas-reineke/indent-blankline.nvim
