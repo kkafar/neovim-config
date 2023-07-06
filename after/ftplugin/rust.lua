@@ -6,7 +6,11 @@
 --   let g:rustfmt_fail_silently = 1
 -- ]])
 --
-vim.g.rust_recommended_style = false
+vim.g.rust_recommended_style = true
+
+-- Unfotunately setting this to true causes many cache / backup files
+-- to be automatically created on every save. TODO: Check whether I can controll this behaviour.
+-- For now I'll just disable these.
 vim.g.rustfmt_autosave = false
 vim.g.rustfmt_fail_silently = false
 
