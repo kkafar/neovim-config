@@ -24,8 +24,8 @@ lsp.configure("pylsp", {
     pylsp = {
       plugins = {
         pycodestyle = {
-          ignore = { 'W391' },
-          maxLineLength = 90
+          ignore = { 'W391', 'E501' },
+          maxLineLength = 120
         }
       }
     }
