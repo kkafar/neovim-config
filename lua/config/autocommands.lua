@@ -1,12 +1,5 @@
---- @param line string
-local function is_whitespace(line)
-  return string.match(line, "^%s+$") ~= nil
-end
+local StringUtils = require("lib.core.stringutils")
 
---- @param line string
-local function is_line_empty(line)
-  return string.len(line) == 0
-end
 
 --- @param input table has following keys
 ---   • id: (number) autocommand id
@@ -19,32 +12,29 @@ end
 local function apply_buffer_whitespace_mods(input)
   local bufnr = input.buf
   local lines = vim.api.nvim_buf_get_lines(bufnr, 0, -1, false)
-  local change_made = false
 
   for i, line in ipairs(lines) do
     -- Strip whitespace from the line end
-    if vim.endswith(line, " ") then
-      lines[i] = string.gsub(line, "%s*$", "")
-      change_made = true
+    local modifed, modified_line = StringUtils.strip_trailing_whitespace(line)
+    if modifed == true then
+      -- Indexing in vim.api in zero based in opposition to iterators in lua
+      vim.api.nvim_buf_set_lines(bufnr, i - 1, i, false, {modified_line})
     end
   end
 
-  local n_lines = #lines
-  local last_line = lines[n_lines]
-  if not is_line_empty(last_line) then
-    table.insert(lines, "")
-    change_made = true
-  elseif n_lines > 1 then
-    local sec_last_line = lines[n_lines - 1]
-    while is_line_empty(sec_last_line) do
-      table.remove(lines) -- remove last line
-      sec_last_line = lines[#lines - 1] end
-      change_made = true
-  end
-
-  if change_made == true then
-    vim.api.nvim_buf_set_lines(bufnr, 0, -1, false, lines)
-  end
+  -- local n_lines = #lines
+  -- local last_line = lines[n_lines]
+  -- if not is_line_empty(last_line) then
+  --   table.insert(lines, "")
+  --   change_made = true
+  -- elseif n_lines > 1 then
+  --   local sec_last_line = lines[n_lines - 1]
+  --   while is_line_empty(sec_last_line) do
+  --     table.remove(lines) -- remove last line
+  --     sec_last_line = lines[#lines - 1] end
+  --     change_made = true
+  -- end
+  --
 end
 
 local whitespace = vim.api.nvim_create_augroup("whitespace", { clear = true })
