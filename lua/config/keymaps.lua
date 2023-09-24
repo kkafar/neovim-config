@@ -16,18 +16,13 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
-vim.keymap.set("x", "<leader>p", "\"_dP")
+-- vim.keymap.set("x", "<leader>p", "\"_dP")
+-- vim.keymap.set("n", "<leader>y", "\"+y")
+-- vim.keymap.set("v", "<leader>y", "\"+y")
+-- vim.keymap.set("n", "<leader>Y", "\"+Y")
+-- vim.keymap.set("n", "<leader>d", "\"_d")
+-- vim.keymap.set("v", "<leader>d", "\"_d")
 
-vim.keymap.set("n", "<leader>y", "\"+y")
-vim.keymap.set("v", "<leader>y", "\"+y")
-vim.keymap.set("n", "<leader>Y", "\"+Y")
-
-vim.keymap.set("n", "<leader>d", "\"_d")
-vim.keymap.set("v", "<leader>d", "\"_d")
-
--- "s" for "split"
-vim.keymap.set("n", "<leader>s", "<cmd>vsplit<CR>")
--- vim.keymap.set("n", "<leader>v", "<cmd>vsplit<CR>")
 
 vim.keymap.set("i", "<C-'>", "<Esc>$a")
 vim.keymap.set("i", "<C-;>", "<Esc>^i")

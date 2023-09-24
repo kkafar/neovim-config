@@ -21,17 +21,6 @@ return {
         -- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
         auto_install = true,
 
-        -- TODO: Experiment with this feature
-        -- incremental_selection = {
-        --   enable = true,
-        --   keymaps = {
-        --     init_selection = '<c-space>',
-        --     node_incremental = '<c-space>',
-        --     scope_incremental = '<c-s>',
-        --     node_decremental = '<M-space>',
-        --   },
-        -- },
-
         highlight = {
           -- `false` will disable the whole extension
           enable = true,
@@ -90,6 +79,16 @@ return {
             }
           },
         },
+        -- TODO: Experiment with this feature
+        -- incremental_selection = {
+        --   enable = true,
+        --   keymaps = {
+        --     init_selection = "gnn",
+        --     node_incremental = "grn",
+        --     scope_incremental = "grc",
+        --     node_decremental = "grm"
+        --   },
+        -- },
       })
     end,
   },
