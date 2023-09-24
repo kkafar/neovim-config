@@ -1,3 +1,6 @@
 return {
-  'puremourning/vimspector',
+  {
+    'puremourning/vimspector',
+    lazy = true,
+  },
 }

@@ -1,6 +1,6 @@
 return {
   {
     'mbbill/undotree',
-    lazy = false,
+    lazy = true,
   },
 }
