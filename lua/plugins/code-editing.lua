@@ -37,7 +37,7 @@ return {
         find = "gzf", -- Find right surrounding
         find_left = "gzF", -- Find left surrounding
         highlight = "gzh", -- Highlihgt surrounding
-        replace = "gzr", -- Replace surrounding
+        replace = "gzc", -- Replace (Change) surrounding
         update_n_lines = "gzn", -- Update `n_lines`
       },
     },
