@@ -1,7 +1,7 @@
 return {
   {
     'folke/zen-mode.nvim',
-    lazy = false,
+    lazy = true,
     config = function()
       require("zen-mode").setup({
         window = {
@@ -17,6 +17,7 @@ return {
           }
         }
       })
+      vim.keymap.set('n', '<leader>z', ':ZenMode<CR>', {})
     end,
   },
 }
