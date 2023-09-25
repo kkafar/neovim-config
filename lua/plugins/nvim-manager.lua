@@ -1,7 +1,7 @@
 return {
   {
     'kkafar/nvim-manager',
-    lazy = false,
+    lazy = true,
     branch = 'main',
     config = function ()
       local manager = require('nvim-manager')

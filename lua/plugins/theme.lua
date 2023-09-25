@@ -5,8 +5,9 @@ return {
     priority = 1000,
     config = function()
       require("tokyonight").setup({
-        hide_inactive_statusline = false,
+        hide_inactive_statusline = true,
         lualine_bold = true,
+        light_style = "day",
         on_colors = function(colors)
           colors.fg_gutter = "#b2b8cf"
           colors.fg_dark = "#b2b8cf"
