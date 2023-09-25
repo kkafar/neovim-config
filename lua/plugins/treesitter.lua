@@ -41,12 +41,12 @@ return {
             enable = true,
             lookahead = true,
             keymaps = {
-              ['aa'] = '@parameter.outer',
-              ['ia'] = '@parameter.inner',
-              ['af'] = '@function.outer',
-              ['if'] = '@function.inner',
-              ['ac'] = '@class.outer',
-              ['ic'] = '@class.inner',
+              ['<leader>so'] = '@parameter.outer',
+              ['<leader>si'] = '@parameter.inner',
+              ['<leader>sfo'] = '@function.outer',
+              ['<leader>sfi'] = '@function.inner',
+              ['<leader>sco'] = '@class.outer',
+              ['<leader>sci'] = '@class.inner',
             },
           },
           move = {
@@ -72,10 +72,10 @@ return {
           swap = {
             enable = true,
             swap_next = {
-              ['<leader>a'] = '@parameter.inner',
+              ['<leader>sw'] = '@parameter.inner',
             },
             swap_previous = {
-              ['<leader>A'] = '@parameter.inner',
+              ['<leader>sb'] = '@parameter.inner',
             }
           },
         },
