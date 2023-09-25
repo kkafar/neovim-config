@@ -7,7 +7,24 @@ return {
       'nvim-lua/plenary.nvim',
     },
     config = function ()
+      local ts = require('telescope')
       local builtin = require('telescope.builtin')
+
+      ts.setup({
+        defaults = {
+          mappings = {
+            i = {
+              ["<leader>h"] = "which_key"
+            }
+          }
+        },
+        -- pickers = {
+        --
+        -- },
+        -- extensions = {
+        --
+        -- },
+      })
 
       -- Lists files in current working directory, respects .gitignore
       vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
@@ -24,7 +41,6 @@ return {
 
       -- Searches for a string in cwd, respects .gitignore
       vim.keymap.set('n', '<leader>pj', builtin.live_grep, {})
-      vim.keymap.set('n', '<leader>pn', builtin.current_buffer_fuzzy_find, {})
       vim.keymap.set('n', '<leader>/', builtin.current_buffer_fuzzy_find, {})
 
       vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
@@ -35,6 +51,7 @@ return {
       -- There are also:
       -- builtin.commands
 
+      vim.keymap.set('n', '<leader>pc', builtin.commands)
       vim.keymap.set('n', '<leader>pt', builtin.colorscheme, {})
       vim.keymap.set('n', '<leader>pq', builtin.quickfix, {})
       vim.keymap.set('n', '<leader>pl', builtin.jumplist, {})
@@ -48,9 +65,9 @@ return {
       -- References for symbol under the cursor
       vim.keymap.set('n', '<leader>lr', builtin.lsp_references, {})
       -- List symbols in current buffer
-      vim.keymap.set('n', '<leader>lbs', builtin.lsp_document_symbols, {})
+      vim.keymap.set('n', '<leader>lsd', builtin.lsp_document_symbols, {})
       -- List symbols in current workspace (defined by LSP)
-      vim.keymap.set('n', '<leader>lws', builtin.lsp_workspace_symbols, {})
+      vim.keymap.set('n', '<leader>lsw', builtin.lsp_workspace_symbols, {})
       vim.keymap.set('n', '<leader>ld', builtin.diagnostics, {}) -- requires options!!
 
       -- Git pickers
