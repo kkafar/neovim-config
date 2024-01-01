@@ -1,6 +1,7 @@
 return {
   {
     'puremourning/vimspector',
+    enabled = false,
     lazy = true,
     config = function ()
       -- local vs = require('vimspector')
