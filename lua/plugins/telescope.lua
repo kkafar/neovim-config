@@ -14,7 +14,7 @@ return {
         defaults = {
           mappings = {
             i = {
-              ["<leader>h"] = "which_key"
+              ["<C-h>"] = "which_key"
             }
           }
         },

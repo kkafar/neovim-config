@@ -10,6 +10,8 @@ return {
     },
     config = function()
       require('nvim-treesitter.configs').setup({
+        modules = {},
+        ignore_install = {},
         -- A list of parser names, or "all" (the four listed parsers should always be installed)
         ensure_installed = { "c", "cpp", "tsx", "vimdoc", "vim", "lua", "vim", "javascript", "typescript", "rust",
           "python" },
