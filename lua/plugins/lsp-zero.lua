@@ -78,8 +78,10 @@ return {
         vim.keymap.set("n", "<leader>D", function() vim.lsp.buf.type_definition() end, opts)
         vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
 
-        vim.keymap.set("n", "<leader>ws", function() vim.lsp.buf.workspace_symbol() end, opts)
-        vim.keymap.set("n", "<leader>bs", function() vim.lsp.buf.document_symbol() end, opts)
+        vim.keymap.set("n", "<leader>psw", function() vim.lsp.buf.workspace_symbol() end, opts)
+        vim.keymap.set("n", "<leader>psd", function() vim.lsp.buf.document_symbol() end, opts)
+        vim.keymap.set("n", "<leader>lsw", function() vim.lsp.buf.workspace_symbol() end, opts)
+        vim.keymap.set("n", "<leader>lsd", function() vim.lsp.buf.document_symbol() end, opts)
 
         vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
         vim.keymap.set("n", "ge", function() vim.diagnostic.goto_next() end, opts)
