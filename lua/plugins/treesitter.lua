@@ -1,13 +1,24 @@
 -- TreeSitter
 return {
   {
+    'nvim-treesitter/playground',
+  },
+  {
+    'nvim-treesitter/nvim-treesitter-textobjects',
+    lazy = false,
+    priority = 40, -- we want to laod this after treesitter, 50 is the default priority
+    dependencies = {
+      'nvim-treesitter/nvim-treesitter'
+    }
+  },
+  {
     'nvim-treesitter/nvim-treesitter',
     build = function()
       pcall(require('nvim-treesitter.install').update { with_sync = true })
     end,
-    dependencies = {
-      'nvim-treesitter/nvim-treesitter-textobjects'
-    },
+    -- dependencies = {
+    --   'nvim-treesitter/nvim-treesitter-textobjects'
+    -- },
     config = function()
       require('nvim-treesitter.configs').setup({
         modules = {},
@@ -43,32 +54,34 @@ return {
             enable = true,
             lookahead = true,
             keymaps = {
-              ['<leader>so'] = '@parameter.outer',
-              ['<leader>si'] = '@parameter.inner',
-              ['<leader>sfo'] = '@function.outer',
-              ['<leader>sfi'] = '@function.inner',
-              ['<leader>sco'] = '@class.outer',
-              ['<leader>sci'] = '@class.inner',
+              ['ap'] = '@parameter.outer',
+              ['ip'] = '@parameter.inner',
+              ['af'] = '@function.outer',
+              ['if'] = '@function.inner',
+              ['ac'] = '@class.outer',
+              ['ic'] = '@class.inner',
+              ['ab'] = '@block.outer',
+              ['ib'] = '@block.inner',
             },
           },
           move = {
             enable = true,
             set_jumps = true,
             goto_next_start = {
-              [']m'] = '@function.outer',
-              [']]'] = '@class.outer',
+              [']f'] = '@function.outer',
+              [']c'] = '@class.outer',
             },
             goto_next_end = {
-              [']M'] = '@function.outer',
-              [']['] = '@class.outer',
+              [']F'] = '@function.outer',
+              [']C'] = '@class.outer',
             },
             goto_previous_start = {
-              ['[m'] = '@function.outer',
-              ['[['] = '@class.outer',
+              ['[f'] = '@function.outer',
+              ['[c'] = '@class.outer',
             },
             goto_previous_end = {
-              ['[M'] = '@function.outer',
-              ['[]'] = '@class.outer',
+              ['[F'] = '@function.outer',
+              ['[C'] = '@class.outer',
             },
           },
           swap = {
@@ -94,10 +107,4 @@ return {
       })
     end,
   },
-  {
-    'nvim-treesitter/playground',
-  },
-  {
-    'nvim-treesitter/nvim-treesitter-textobjects',
-  }
 }
