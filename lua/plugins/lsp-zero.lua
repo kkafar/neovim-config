@@ -73,10 +73,11 @@ return {
       lspzero.on_attach(function (client, bufnr)
         local opts = { buffer = bufnr, remap = false }
 
-        vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
         vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
-        vim.keymap.set("n", "<leader>D", function() vim.lsp.buf.type_definition() end, opts)
-        vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
+        -- Handled by telescope
+        -- vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+        -- vim.keymap.set("n", "<leader>D", function() vim.lsp.buf.type_definition() end, opts)
+        -- vim.keymap.set("n", "gi", function() vim.lsp.buf.implementation() end, opts)
 
         -- Handled by telescope
         -- vim.keymap.set("n", "<leader>psw", function() vim.lsp.buf.workspace_symbol() end, opts)
