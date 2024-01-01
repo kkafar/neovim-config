@@ -14,7 +14,7 @@ return {
         defaults = {
           mappings = {
             i = {
-              ["<leader>h"] = "which_key"
+              ["<C-h>"] = "which_key"
             }
           }
         },
@@ -25,6 +25,8 @@ return {
         --
         -- },
       })
+      -- NOT SURE WHETHER THESE SHOULD BE PASSED, COPIERD IT FROM lsp-zero.lua
+      local opts = { remap = false }
 
       -- Lists files in current working directory, respects .gitignore
       vim.keymap.set('n', '<leader>pf', builtin.find_files, {})
@@ -45,13 +47,14 @@ return {
 
       vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
       vim.keymap.set('n', '<leader>po', builtin.oldfiles, {})
+      vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
 
       -- List of pickers: https://github.com/nvim-telescope/telescope.nvim#pickers
       -- There are a lot of them!!!
       -- There are also:
       -- builtin.commands
 
-      vim.keymap.set('n', '<leader>pc', builtin.commands)
+      vim.keymap.set('n', '<leader>pc', builtin.commands, {})
       vim.keymap.set('n', '<leader>pt', builtin.colorscheme, {})
       vim.keymap.set('n', '<leader>pq', builtin.quickfix, {})
       vim.keymap.set('n', '<leader>pl', builtin.jumplist, {})
@@ -62,13 +65,20 @@ return {
 
       -- Pickers from Neovim LSP
       --
-      -- References for symbol under the cursor
       vim.keymap.set('n', '<leader>lr', builtin.lsp_references, {})
-      -- List symbols in current buffer
       vim.keymap.set('n', '<leader>lsd', builtin.lsp_document_symbols, {})
-      -- List symbols in current workspace (defined by LSP)
       vim.keymap.set('n', '<leader>lsw', builtin.lsp_workspace_symbols, {})
       vim.keymap.set('n', '<leader>ld', builtin.diagnostics, {}) -- requires options!!
+
+
+      -- Handled by lsp
+      -- vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
+      vim.keymap.set("n", "gd", builtin.lsp_definitions, opts)
+      vim.keymap.set("n", "<leader>D", builtin.lsp_type_definitions, opts)
+      vim.keymap.set("n", "gi", builtin.lsp_implementations, opts)
+
+      vim.keymap.set("n", "<leader>gi", builtin.lsp_incoming_calls, opts)
+      vim.keymap.set("n", "<leader>go", builtin.lsp_outgoing_calls, opts)
 
       -- Git pickers
       vim.keymap.set('n', '<leader>pgc', builtin.git_commits, {})
