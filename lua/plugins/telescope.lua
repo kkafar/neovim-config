@@ -45,6 +45,7 @@ return {
 
       vim.keymap.set('n', '<leader>pb', builtin.buffers, {})
       vim.keymap.set('n', '<leader>po', builtin.oldfiles, {})
+      vim.keymap.set('n', '<leader>ph', builtin.help_tags, {})
 
       -- List of pickers: https://github.com/nvim-telescope/telescope.nvim#pickers
       -- There are a lot of them!!!
