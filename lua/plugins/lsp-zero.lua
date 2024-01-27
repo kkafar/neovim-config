@@ -18,7 +18,7 @@ return {
       { 'hrsh7th/cmp-nvim-lua' },   -- Optional
 
       -- Snippets
-      { 
+      {
         'L3MON4D3/LuaSnip',
         version = "v2.*",
         build = "make install_jsregexp"
@@ -53,7 +53,7 @@ return {
           pylsp = {
             plugins = {
               pycodestyle = {
-                ignore = { 'W391', 'E501', 'E203' },
+                ignore = { 'W391', 'E501', 'E203', 'E265', 'E402' },
                 maxLineLength = 120
               }
             }
