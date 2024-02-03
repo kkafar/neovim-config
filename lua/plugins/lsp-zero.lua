@@ -21,7 +21,7 @@ return {
       {
         'L3MON4D3/LuaSnip',
         version = "v2.*",
-        build = "make install_jsregexp"
+        build = "make install_jsregexp",
       },           -- Required
       { 'rafamadriz/friendly-snippets' }, -- Optional
     },
@@ -68,6 +68,8 @@ return {
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
         ['<tab>'] = cmp.mapping.confirm({ select = true }),
         ['<C-Space>'] = cmp.mapping.complete(),
+        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+        ['<C-f>'] = cmp.mapping.scroll_docs(4),
       })
 
       lspzero.setup_nvim_cmp({
