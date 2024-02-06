@@ -61,6 +61,18 @@ return {
         }
       })
 
+      lspzero.configure("rust_analyzer", {
+        settings = {
+          ["rust-analyzer"] = {
+            cargo = {
+              buildScripts = {
+                enable = true,
+              }
+            }
+          }
+        }
+      })
+
       local cmp = require("cmp")
       local cmp_select = { behaviour = cmp.SelectBehavior.Select }
       local cmp_mappings = lspzero.defaults.cmp_mappings({
