@@ -45,7 +45,11 @@ return {
   {
     'echasnovski/mini.pairs',
     event = "VeryLazy",
-    opts = {}
+    opts = {
+      mappings = {
+        ['<'] = { action = 'open', pair = '<>', neigh_pattern = '[^\\].]' },
+      }
+    }
   },
 
   -- 'rstacruz/vim-closer'
