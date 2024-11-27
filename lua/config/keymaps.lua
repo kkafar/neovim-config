@@ -27,8 +27,8 @@ vim.keymap.set("n", "N", "Nzzzv")
 vim.keymap.set("i", "<C-'>", "<Esc>$a")
 vim.keymap.set("i", "<C-;>", "<Esc>^i")
 
-vim.keymap.set("n", "<leader>o", "o<Esc>")
-vim.keymap.set("n", "<leader>O", "O<Esc>")
+vim.keymap.set("n", "<leader>o", "o<Esc>k")
+vim.keymap.set("n", "<leader>O", "O<Esc>j")
 
 vim.keymap.set("i", "<A-h>", "<C-o>h", options)
 vim.keymap.set("i", "<A-j>", "<C-o>j", options)
