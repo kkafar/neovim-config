@@ -4,13 +4,19 @@ return {
     dependencies = {
       'SmiteshP/nvim-navic'
     },
-    config = function()
-      require('barbecue').setup({
-        theme = 'tokyonight',
-        symbols = {
-          separator = '>'
-        }
-      })
-    end,
+    opts = {
+      theme = 'tokyonight',
+      symbols = {
+        separator = '>'
+      }
+    },
+    -- config = function()
+    --   require('barbecue').setup({
+    --     theme = 'tokyonight',
+    --     symbols = {
+    --       separator = '>'
+    --     }
+    --   })
+    -- end,
   },
 }
