@@ -5,27 +5,27 @@ return {
     lazy = false,
     dependencies = {
       -- LSP Support
-      { 'neovim/nvim-lspconfig' },           -- Required
-      { 'williamboman/mason.nvim' },         -- Optional
+      { 'neovim/nvim-lspconfig' },             -- Required
+      { 'williamboman/mason.nvim' },           -- Optional
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },       -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },   -- Required
-      { 'hrsh7th/cmp-buffer' },     -- Optional
-      { 'hrsh7th/cmp-path' },       -- Optional
+      { 'hrsh7th/nvim-cmp' },         -- Required
+      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
+      { 'hrsh7th/cmp-buffer' },       -- Optional
+      { 'hrsh7th/cmp-path' },         -- Optional
       { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },   -- Optional
+      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
 
       -- Snippets
       {
         'L3MON4D3/LuaSnip',
         version = "v2.*",
         build = "make install_jsregexp",
-      },           -- Required
+      },                                  -- Required
       { 'rafamadriz/friendly-snippets' }, -- Optional
     },
-    config = function ()
+    config = function()
       -- Learn the keybindings, see :help lsp-zero-keybindings
       -- Learn to configure LSP servers, see :help lsp-zero-api-showcase
       local lspzero = require("lsp-zero")
@@ -40,6 +40,8 @@ return {
         "eslint",
         "rust_analyzer",
         "clangd",
+        "ruff",
+        "pyright"
       })
 
       lspzero.configure("clangd", {
@@ -48,17 +50,25 @@ return {
         }
       })
 
-      lspzero.configure("pylsp", {
+      -- Python
+
+      -- lspzero.configure("pylsp", {
+      --   settings = {
+      --     pylsp = {
+      --       plugins = {
+      --         pycodestyle = {
+      --           ignore = { 'W391', 'E501', 'E203', 'E265', 'E402', 'E504' },
+      --           maxLineLength = 120
+      --         }
+      --       }
+      --     }
+      --   }
+      -- })
+
+      lspzero.configure("ruff", {
         settings = {
-          pylsp = {
-            plugins = {
-              pycodestyle = {
-                ignore = { 'W391', 'E501', 'E203', 'E265', 'E402', 'E504' },
-                maxLineLength = 120
-              }
-            }
-          }
-        }
+
+        },
       })
 
       lspzero.configure("rust_analyzer", {
@@ -88,7 +98,7 @@ return {
         mapping = cmp_mappings
       })
 
-      lspzero.on_attach(function (client, bufnr)
+      lspzero.on_attach(function(client, bufnr)
         local opts = { buffer = bufnr, remap = false }
 
         vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
