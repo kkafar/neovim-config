@@ -36,7 +36,7 @@ return {
       lspzero.nvim_workspace()
 
       lspzero.ensure_installed({
-        "tsserver",
+        "ts_ls",
         "eslint",
         "rust_analyzer",
         "clangd",
