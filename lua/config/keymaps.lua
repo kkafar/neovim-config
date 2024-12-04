@@ -23,7 +23,6 @@ vim.keymap.set("n", "N", "Nzzzv")
 -- vim.keymap.set("n", "<leader>d", "\"_d")
 -- vim.keymap.set("v", "<leader>d", "\"_d")
 
-
 vim.keymap.set("i", "<C-'>", "<Esc>$a")
 vim.keymap.set("i", "<C-;>", "<Esc>^i")
 
@@ -40,4 +39,8 @@ vim.keymap.set("i", "<A-b>", "<C-o>b", options)
 vim.keymap.set("i", "<A-B>", "<C-o>B", options)
 vim.keymap.set("i", "<A-E>", "<C-o>E", options)
 vim.keymap.set("i", "<A-W>", "<C-o>W", options)
+
+vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
+vim.keymap.set("n", "<leader>x", ":.lua<CR>")
+vim.keymap.set("v", "<leader>x", ":lua<CR>")
 
