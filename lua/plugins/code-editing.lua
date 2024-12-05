@@ -1,11 +1,5 @@
 return {
   -- 'hrsh7th/cmp-nvim-lsp-signature-help'
-  {
-    'numToStr/Comment.nvim',
-    config = function ()
-      require('Comment').setup()
-    end
-  },
   'tpope/vim-endwise',
   -- 'tpope/vim-surround', -- https://github.com/tpope/vim-surround,
   'hrsh7th/cmp-vsnip',

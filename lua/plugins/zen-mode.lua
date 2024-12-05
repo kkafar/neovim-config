@@ -1,11 +1,11 @@
 return {
   {
     'folke/zen-mode.nvim',
-    lazy = true,
+    lazy = false,
     config = function()
       require("zen-mode").setup({
         window = {
-          width = 140,
+          width = 0.45,
           options = {
             signcolumn = "yes",
             relativenumber = true,
