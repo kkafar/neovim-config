@@ -49,6 +49,8 @@ return {
       vim.keymap.set('n', '<leader>pb', builtin.buffers, { desc = 'Telescope: List buffers' })
       vim.keymap.set('n', '<leader>po', builtin.oldfiles, { desc = 'Telescope: List recent files' })
       vim.keymap.set('n', '<leader>ph', builtin.help_tags, { desc = 'Telescope: Search tag in neovim help pages' })
+      vim.keymap.set('n', '<leader>pm', builtin.marks, { desc = 'Telescope: List marks' })
+      vim.keymap.set('n', '<leader>pa', builtin.resume, { desc = 'Telescope: Resume last telescope session' })
 
       -- List of pickers: https://github.com/nvim-telescope/telescope.nvim#pickers
       -- There are a lot of them!!!
