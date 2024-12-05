@@ -9,7 +9,8 @@ vim.g.tokyonight_transparent = true
 -- vim.cmd("colorscheme tokyonight-night")
 -- vim.cmd("colorscheme tokyonight-storm")
 
-vim.cmd("colorscheme tokyonight-moon")
+vim.cmd.colorscheme('tokyonight-moon')
+-- vim.cmd("colorscheme tokyonight-moon")
 
 local function toggle_theme()
   if vim.opt.background:get() == "dark" then

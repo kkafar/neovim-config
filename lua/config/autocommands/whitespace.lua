@@ -1,6 +1,5 @@
 local StringUtils = require("lib.core.stringutils")
 
-
 --- @param input table has following keys
 ---   • id: (number) autocommand id
 ---   • event: (string) name of the event that triggered the callback
