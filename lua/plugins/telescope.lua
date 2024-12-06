@@ -68,7 +68,7 @@ return {
 
       -- Pickers from Neovim LSP
       --
-      -- I believe `mason` setups these keybindings
+      -- These are set up by default by vim.lsp, see lsp-defaults
       vim.keymap.del('n', 'gra')
       vim.keymap.del('n', 'gri')
       vim.keymap.del('n', 'grn')
