@@ -4,8 +4,11 @@ return {
   --
   -- Awesome page with lots of plugins
   -- https://neovimcraft.com/
+  -- https://dotfyle.com/plugins/
 
   -- Plugins to try out
+  -- https://github.com/akinsho/bufferline.nvim
+  -- https://github.com/folke/noice.nvim
   -- https://github.com/folke/trouble.nvim
   -- https://github.com/lewis6991/gitsigns.nvim
   -- https://github.com/pwntester/octo.nvim
