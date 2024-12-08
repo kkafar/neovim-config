@@ -69,13 +69,13 @@ return {
       -- Pickers from Neovim LSP
       --
       -- These are set up by default by vim.lsp, see lsp-defaults
-      vim.keymap.del('n', 'gra')
-      vim.keymap.del('n', 'gri')
-      vim.keymap.del('n', 'grn')
-      vim.keymap.del('n', 'grr')
+      -- vim.keymap.del('n', 'gra')
+      -- vim.keymap.del('n', 'gri')
+      -- vim.keymap.del('n', 'grn')
+      -- vim.keymap.del('n', 'grr')
 
       vim.keymap.set('n', '<leader>lr', builtin.lsp_references, { desc = 'Telescope: List symbol references' })
-      vim.keymap.set('n', 'gr', builtin.lsp_references, { desc = 'Telescope: List symbol references' }) -- Alternative
+      vim.keymap.set('n', 'grr', builtin.lsp_references, { desc = 'Telescope: List symbol references', remap = true }) -- Alternative
 
 
       vim.keymap.set('n', '<leader>lsd', builtin.lsp_document_symbols, { desc = 'Telescope: Show document symbols '})
