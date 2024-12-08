@@ -99,7 +99,7 @@ return {
       })
 
       lspzero.on_attach(function(client, bufnr)
-        local opts = { buffer = bufnr, remap = false }
+        local opts = { buffer = bufnr, remap = true }
 
         vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
         -- Handled by telescope
@@ -130,11 +130,11 @@ return {
         vim.keymap.set("n", "<leader>vmt", function() vim.lsp.buf.format() end, opts)
         vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format() end, opts)
 
-        if client.name == "rust_analyzer" then
-          local rt = require("rust-tools")
-          rt.inlay_hints.set()
-          rt.inlay_hints.enable()
-        end
+        -- if client.name == "rust_analyzer" then
+        --   local rt = require("rust-tools")
+        --   rt.inlay_hints.set()
+        --   rt.inlay_hints.enable()
+        -- end
       end)
 
       lspzero.setup()

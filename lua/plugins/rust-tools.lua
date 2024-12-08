@@ -4,6 +4,7 @@ return {
     lazy = true,
     ft = 'rust',
     config = function ()
+      vim.print("Configuring rust-tools")
       local rt = require("rust-tools")
       rt.setup({
         inlay_hints = {
