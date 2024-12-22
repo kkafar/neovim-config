@@ -4,6 +4,12 @@ return {
     dependencies = { 'nvim-tree/nvim-web-devicons' },
     lazy = false,
     config = function()
+      local filename_settings = {
+          'filename',
+          file_status = true,
+          newfile_status = true,
+          path = 1,
+      };
       require('lualine').setup({
         options = {
           icons_enabled = true,
@@ -13,6 +19,7 @@ return {
           theme = 'palenight',
           -- theme = 'nightfly',
           -- theme = 'moonlight',
+          -- theme = 'tokyonight-moon',
           component_separators = { left = '', right = '' },
           section_separators = { left = '', right = '' },
           disabled_filetypes = {
@@ -21,6 +28,7 @@ return {
           },
           ignore_focus = {},
           always_divide_middle = true,
+          always_show_tabline = true,
           globalstatus = false,
           refresh = {
             statusline = 100,
@@ -31,7 +39,7 @@ return {
         sections = {
           lualine_a = { 'mode' },
           lualine_b = { 'branch', },
-          lualine_c = { { 'filename', file_status = true, newfile_status = true, path = 1 }, 'diff', {
+          lualine_c = { filename_settings, 'diff', {
             'diagnostics',
             symbols = { error = 'E ', warn = 'W ', info = 'I ', hint = 'H ' },
           } },
@@ -43,7 +51,7 @@ return {
         inactive_sections = {
           lualine_a = {},
           lualine_b = {},
-          lualine_c = {},
+          lualine_c = { filename_settings },
           lualine_x = { 'location' },
           lualine_y = {},
           lualine_z = {}

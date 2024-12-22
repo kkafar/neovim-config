@@ -43,6 +43,7 @@ return {
           enable = true,
         }
       })
+      -- TODO: These should be moved somewhere else!!
       -- NvimTree keybindings
       -- These start with "f" prefix (as "filetree")
       -- Exeption is made for toggling, so that the access is faster

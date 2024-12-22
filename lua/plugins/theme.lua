@@ -5,15 +5,19 @@ return {
     priority = 1000,
     config = function()
       require("tokyonight").setup({
+        style = "moon",
+        light_style = "day",
+        terminal_colors = true,
         hide_inactive_statusline = true,
         lualine_bold = true,
-        light_style = "day",
-        transparent = false,
-        style = "moon",
+        transparent = true,
         styles = {
           comments = { italic = true },
           keywords = { italic = true },
           sidebars  = "dark",  -- dark, transparent, normal
+          functions = {},
+          variables = {},
+          floats = "dark", -- dark, transparent, normal
         },
         sidebars = { "qf", "help" },
         day_brightness = 0.3,
@@ -23,6 +27,7 @@ return {
           colors.fg_dark = "#b2b8cf"
           colors.dark5 = "#b2b8cf"
         end,
+        on_highlights = function(_highlights, _colors) end,
       })
     end,
   },
