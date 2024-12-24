@@ -2,7 +2,7 @@ return {
   {
     "akinsho/bufferline.nvim",
     version = "*",
-    enabled = false,
+    enabled = true,
     dependencies = {
       "nvim-tree/nvim-web-devicons"
     },
@@ -25,14 +25,14 @@ return {
           },
           close_icon = '',
           buffer_close_icon = '',
-          offsets = {
-            {
-              filetype = "NvimTree",
-              text = "File Explorer",
-              text_align = "left",
-              separator = true,
-            },
-          },
+          -- offsets = {
+          --   {
+          --     filetype = "NvimTree",
+          --     text = "File Explorer",
+          --     text_align = "left",
+          --     separator = true,
+          --   },
+          -- },
         }
       })
     end
