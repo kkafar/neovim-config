@@ -88,7 +88,7 @@ return {
       local cmp_mappings = lspzero.defaults.cmp_mappings({
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<tab>'] = cmp.mapping.confirm({ select = true }),
+        -- ['<tab>'] = cmp.mapping.confirm({ select = true }),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -100,6 +100,7 @@ return {
 
       lspzero.on_attach(function(client, bufnr)
         local opts = { buffer = bufnr, remap = true }
+        local CommonFormattingOptions = require("lib.core.common-formatting-options")
 
         vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
         -- Handled by telescope
@@ -113,10 +114,8 @@ return {
         -- vim.keymap.set("n", "<leader>lsw", function() vim.lsp.buf.workspace_symbol() end, opts)
         -- vim.keymap.set("n", "<leader>lsd", function() vim.lsp.buf.document_symbol() end, opts)
 
-        vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-        vim.keymap.set("n", "ge", function() vim.diagnostic.goto_next() end, opts)
-        vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-        vim.keymap.set("n", "gE", function() vim.diagnostic.goto_prev() end, opts)
+        vim.keymap.set("n", "g]", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
+        vim.keymap.set("n", "g[", function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
 
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
         vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
@@ -127,8 +126,11 @@ return {
         vim.keymap.set("n", "<leader>vrf", function() vim.lsp.codelens.refresh() end, opts)
         vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
         vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-        vim.keymap.set("n", "<leader>vmt", function() vim.lsp.buf.format() end, opts)
-        vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format() end, opts)
+
+        vim.keymap.set("n", "<leader>vmt",
+          function() vim.lsp.buf.format({ formatting_options = CommonFormattingOptions.formatting_options }) end, opts)
+        vim.keymap.set("n", "<F3>",
+          function() vim.lsp.buf.format({ formatting_options = CommonFormattingOptions.formatting_options }) end, opts)
 
         -- if client.name == "rust_analyzer" then
         --   local rt = require("rust-tools")
