@@ -26,19 +26,21 @@ return {
     end,
     opts = {
       mappings = {
-        add = "gza", -- Add surrounding in Normal and Visual modes
-        delete = "gzd", -- Delete surrounding
-        find = "gzf", -- Find right surrounding
-        find_left = "gzF", -- Find left surrounding
-        highlight = "gzh", -- Highlihgt surrounding
-        replace = "gzc", -- Replace (Change) surrounding
+        add = "<leader>sa", -- Add surrounding in Normal and Visual modes
+        delete = "<leader>sd", -- Delete surrounding
+        find = "<leader>sf", -- Find right surrounding
+        find_left = "<leader>sF", -- Find left surrounding
+        highlight = "<leader>sh", -- Highlihgt surrounding
+        replace = "<leader>sc", -- Replace (Change) surrounding
         update_n_lines = "gzn", -- Update `n_lines`
       },
+      -- Radious within the surrounding is searched
+      n_lines = 20,
     },
   },
   {
     'echasnovski/mini.pairs',
-    event = "VeryLazy",
+    -- event = "VeryLazy",
     opts = {
       mappings = {
         ['<'] = { action = 'open', pair = '<>', neigh_pattern = '[^\\].]' },
