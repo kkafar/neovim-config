@@ -1,7 +1,7 @@
 return {
   {
     "fladson/vim-kitty",
-    lasy = true,
+    lazy = true,
     ft = "kitty",
     branch = "main" -- You can select a tagged version
   }

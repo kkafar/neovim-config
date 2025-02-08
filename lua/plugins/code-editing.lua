@@ -26,19 +26,21 @@ return {
     end,
     opts = {
       mappings = {
-        add = "gza", -- Add surrounding in Normal and Visual modes
-        delete = "gzd", -- Delete surrounding
-        find = "gzf", -- Find right surrounding
-        find_left = "gzF", -- Find left surrounding
-        highlight = "gzh", -- Highlihgt surrounding
-        replace = "gzc", -- Replace (Change) surrounding
+        add = "<leader>sa", -- Add surrounding in Normal and Visual modes
+        delete = "<leader>sd", -- Delete surrounding
+        find = "<leader>sf", -- Find right surrounding
+        find_left = "<leader>sF", -- Find left surrounding
+        highlight = "<leader>sh", -- Highlihgt surrounding
+        replace = "<leader>sc", -- Replace (Change) surrounding
         update_n_lines = "gzn", -- Update `n_lines`
       },
+      -- Radious within the surrounding is searched
+      n_lines = 20,
     },
   },
   {
     'echasnovski/mini.pairs',
-    event = "VeryLazy",
+    -- event = "VeryLazy",
     opts = {
       mappings = {
         ['<'] = { action = 'open', pair = '<>', neigh_pattern = '[^\\].]' },
@@ -52,25 +54,24 @@ return {
   --   'kkafar/vim-closer',
   --   branch = '@kkafar/attempt-to-fix-bracket-close-after-else'
   -- },
-  -- Another possible solution
-  -- 'jiangmiao/auto-pairs'
-
-  -- Does not work :(
-  -- {
-  --   'm4xshen/autoclose.nvim'
-  -- }
-
   {
+    -- Basic usage:
+    --
+    -- select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
+    -- create cursors vertically with Ctrl-Down/Ctrl-Up
+    -- select one character at a time with Shift-Arrows
+    -- press n/N to get next/previous occurrence
+    -- press [/] to select next/previous cursor
+    -- press q to skip current and get next occurrence
+    -- press Q to remove current cursor/selection
+    -- start insert mode with i,a,I,A
     'mg979/vim-visual-multi',
     branch = 'master'
-  }, -- TO LEARN https://github.com/mg979/vim-visual-multi
+  },
 
   {
     'windwp/nvim-ts-autotag',
     opts = {},
-    -- config = function()
-    --   require('nvim-ts-autotag').setup()
-    -- end
   }
 }
 
