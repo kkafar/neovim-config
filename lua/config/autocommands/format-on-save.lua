@@ -1,3 +1,5 @@
+local CommonFormattingOptions = require("lib.core.common-formatting-options")
+
 vim.api.nvim_create_autocmd("BufWritePre", {
   desc = "Format file before saving using LSP capabilities",
   pattern = "*.{py,lua,rs,cpp,c,proto,js,ts,tsx}",
@@ -12,15 +14,13 @@ vim.api.nvim_create_autocmd("BufWritePre", {
     -- - data: (any) arbitrary data passed from [nvim_exec_autocmds()] [event-data](file:///usr/share/nvim/runtime/lua/vim/_meta)
 
     vim.lsp.buf.format({
-      async = true,
+      async = false, -- formatting should finish before buffer is written
       timeout_ms = 1500,
       -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#formattingOptions
-      formatting_options = {
-        insertSpaces = true,
-        trimTrailingWhitespace = true,
-        insertFinalNewline = true,
-        trimFinalNewlines = true,
-      },
+      formatting_options = CommonFormattingOptions.formatting_options,
+      filter = function (client)
+        return true
+      end
     });
   end
 })

@@ -100,6 +100,7 @@ return {
 
       lspzero.on_attach(function(client, bufnr)
         local opts = { buffer = bufnr, remap = true }
+        local CommonFormattingOptions = require("lib.core.common-formatting-options")
 
         vim.keymap.set("n", "gD", function() vim.lsp.buf.declaration() end, opts)
         -- Handled by telescope
@@ -125,8 +126,9 @@ return {
         vim.keymap.set("n", "<leader>vrf", function() vim.lsp.codelens.refresh() end, opts)
         vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, opts)
         vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, opts)
-        vim.keymap.set("n", "<leader>vmt", function() vim.lsp.buf.format() end, opts)
-        vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format() end, opts)
+
+        vim.keymap.set("n", "<leader>vmt", function() vim.lsp.buf.format({ formatting_options = CommonFormattingOptions.formatting_options }) end, opts)
+        vim.keymap.set("n", "<F3>", function() vim.lsp.buf.format({ formatting_options = CommonFormattingOptions.formatting_options }) end, opts)
 
         -- if client.name == "rust_analyzer" then
         --   local rt = require("rust-tools")
