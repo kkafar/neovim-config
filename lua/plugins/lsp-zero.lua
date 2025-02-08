@@ -88,7 +88,7 @@ return {
       local cmp_mappings = lspzero.defaults.cmp_mappings({
         ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
         ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        ['<tab>'] = cmp.mapping.confirm({ select = true }),
+        -- ['<tab>'] = cmp.mapping.confirm({ select = true }),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-b>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
@@ -113,10 +113,8 @@ return {
         -- vim.keymap.set("n", "<leader>lsw", function() vim.lsp.buf.workspace_symbol() end, opts)
         -- vim.keymap.set("n", "<leader>lsd", function() vim.lsp.buf.document_symbol() end, opts)
 
-        vim.keymap.set("n", "[d", function() vim.diagnostic.goto_next() end, opts)
-        vim.keymap.set("n", "ge", function() vim.diagnostic.goto_next() end, opts)
-        vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, opts)
-        vim.keymap.set("n", "gE", function() vim.diagnostic.goto_prev() end, opts)
+        vim.keymap.set("n", "g]", function() vim.diagnostic.jump({ count = 1, float = true }) end, opts)
+        vim.keymap.set("n", "g[", function() vim.diagnostic.jump({ count = -1, float = true }) end, opts)
 
         vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
         vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, opts)
