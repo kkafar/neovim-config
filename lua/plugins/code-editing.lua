@@ -54,25 +54,24 @@ return {
   --   'kkafar/vim-closer',
   --   branch = '@kkafar/attempt-to-fix-bracket-close-after-else'
   -- },
-  -- Another possible solution
-  -- 'jiangmiao/auto-pairs'
-
-  -- Does not work :(
-  -- {
-  --   'm4xshen/autoclose.nvim'
-  -- }
-
   {
+    -- Basic usage:
+    --
+    -- select words with Ctrl-N (like Ctrl-d in Sublime Text/VS Code)
+    -- create cursors vertically with Ctrl-Down/Ctrl-Up
+    -- select one character at a time with Shift-Arrows
+    -- press n/N to get next/previous occurrence
+    -- press [/] to select next/previous cursor
+    -- press q to skip current and get next occurrence
+    -- press Q to remove current cursor/selection
+    -- start insert mode with i,a,I,A
     'mg979/vim-visual-multi',
     branch = 'master'
-  }, -- TO LEARN https://github.com/mg979/vim-visual-multi
+  },
 
   {
     'windwp/nvim-ts-autotag',
     opts = {},
-    -- config = function()
-    --   require('nvim-ts-autotag').setup()
-    -- end
   }
 }
 
