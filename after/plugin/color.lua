@@ -1,5 +1,5 @@
 -- Configuration for tokyo-night theme
-vim.g.tokyonight_transparent_sidebar = false
+vim.g.tokyonight_transparent_sidebar = true
 vim.g.tokyonight_transparent = true
 
 -- vim.opt.background = "light"
@@ -23,8 +23,4 @@ local function toggle_theme()
 end
 
 -- vim.keymap.set("n", "<leader>ut", vim.cmd.ToggleTheme, {})
-vim.keymap.set("n", "<leader>ut", toggle_theme, {})
-
-
-
-
+vim.keymap.set("n", "<leader>ut", toggle_theme, { desc = "Select theme" })

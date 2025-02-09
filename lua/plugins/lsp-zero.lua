@@ -10,12 +10,13 @@ return {
       { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
       -- Autocompletion
-      { 'hrsh7th/nvim-cmp' },         -- Required
-      { 'hrsh7th/cmp-nvim-lsp' },     -- Required
-      { 'hrsh7th/cmp-buffer' },       -- Optional
-      { 'hrsh7th/cmp-path' },         -- Optional
-      { 'saadparwaiz1/cmp_luasnip' }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua' },     -- Optional
+      -- For now autocompletion is handled by blink.cmp
+      { 'hrsh7th/nvim-cmp',                 enabled = false }, -- Required
+      { 'hrsh7th/cmp-nvim-lsp',             enabled = false }, -- Required
+      { 'hrsh7th/cmp-buffer',               enabled = false }, -- Optional
+      { 'hrsh7th/cmp-path',                 enabled = false }, -- Optional
+      { 'saadparwaiz1/cmp_luasnip',         enabled = false }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua',             enabled = true }, -- Optional
 
       -- Snippets
       {
@@ -83,21 +84,21 @@ return {
         }
       })
 
-      local cmp = require("cmp")
-      local cmp_select = { behaviour = cmp.SelectBehavior.Select }
-      local cmp_mappings = lspzero.defaults.cmp_mappings({
-        ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
-        ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
-        -- ['<tab>'] = cmp.mapping.confirm({ select = true }),
-        ['<C-Space>'] = cmp.mapping.complete(),
-        ['<C-b>'] = cmp.mapping.scroll_docs(-4),
-        ['<C-f>'] = cmp.mapping.scroll_docs(4),
-      })
-
-      lspzero.setup_nvim_cmp({
-        mapping = cmp_mappings
-      })
-
+      -- local cmp = require("cmp")
+      -- local cmp_select = { behaviour = cmp.SelectBehavior.Select }
+      -- local cmp_mappings = lspzero.defaults.cmp_mappings({
+      --   ['<C-p>'] = cmp.mapping.select_prev_item(cmp_select),
+      --   ['<C-n>'] = cmp.mapping.select_next_item(cmp_select),
+      --   -- ['<tab>'] = cmp.mapping.confirm({ select = true }),
+      --   ['<C-Space>'] = cmp.mapping.complete(),
+      --   ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+      --   ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      -- })
+      --
+      -- lspzero.setup_nvim_cmp({
+      --   mapping = cmp_mappings
+      -- })
+      --
       lspzero.on_attach(function(client, bufnr)
         local opts = { buffer = bufnr, remap = true }
         local CommonFormattingOptions = require("lib.core.common-formatting-options")
@@ -139,6 +140,10 @@ return {
         -- end
       end)
 
+      lspzero.set_preferences({
+        manage_nvim_cmp = false,
+        cmp_capabilites = false,
+      })
       lspzero.setup()
 
       -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v1.x/doc/md/lsp.md#configure-diagnostics
