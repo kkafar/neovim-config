@@ -32,4 +32,3 @@ vim.o.icon = true
 vim.o.ruler = true
 
 vim.o.completeopt = 'menuone,noselect'
-
