@@ -16,7 +16,7 @@ return {
       },
 
       -- Additional lua configuration, makes nvim stuff amazing!
-      'folke/neodev.nvim',
+      'folke/lazydev.nvim',
       { 'saghen/blink.cmp' },
     },
     config = function(_, opts)
@@ -31,7 +31,15 @@ return {
     end
   },
   {
-    'folke/neodev.nvim',
-    opts = {},
-  }
+    -- https://github.com/folke/lazydev.nvim
+    "folke/lazydev.nvim",
+    ft = "lua", -- only load on lua files
+    opts = {
+      library = {
+        -- See the configuration section for more details
+        -- Load luvit types when the `vim.uv` word is found
+        { path = "${3rd}/luv/library", words = { "vim%.uv" } },
+      },
+    },
+  },
 }
