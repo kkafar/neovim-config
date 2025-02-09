@@ -43,7 +43,16 @@ return {
               return ctx.mode ~= 'cmdline'
             end
           }
+        },
+        documentation = {
+          auto_show = true,
+          auto_show_delay_ms = 300,
+          -- might impact performance
+          treesitter_highlighting = true,
         }
+      },
+      signature = {
+        enabled = true,
       },
 
       -- Default list of enabled providers defined so that you can extend it
