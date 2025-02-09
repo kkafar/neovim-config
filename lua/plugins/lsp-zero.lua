@@ -16,7 +16,7 @@ return {
       { 'hrsh7th/cmp-buffer',               enabled = false }, -- Optional
       { 'hrsh7th/cmp-path',                 enabled = false }, -- Optional
       { 'saadparwaiz1/cmp_luasnip',         enabled = false }, -- Optional
-      { 'hrsh7th/cmp-nvim-lua',             enabled = false }, -- Optional
+      { 'hrsh7th/cmp-nvim-lua',             enabled = true }, -- Optional
 
       -- Snippets
       {
@@ -140,6 +140,10 @@ return {
         -- end
       end)
 
+      lspzero.set_preferences({
+        manage_nvim_cmp = false,
+        cmp_capabilites = false,
+      })
       lspzero.setup()
 
       -- https://github.com/VonHeikemen/lsp-zero.nvim/blob/v1.x/doc/md/lsp.md#configure-diagnostics
