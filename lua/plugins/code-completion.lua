@@ -21,7 +21,7 @@ return {
       -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
       -- See the full "keymap" documentation for information on defining your own keymap.
       keymap = {
-        preset = 'enter',
+        preset = 'default',
         -- Can't use Enter for completion. Even when combined with selection.preselect function that
         -- should disable preselect in cmdline, hitting enter will accept suggestion and not execute command!
         -- This makes it impossible to execute any command, e.g. save the text using :w. Let's use <C-y> for a while...
