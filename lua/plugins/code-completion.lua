@@ -26,6 +26,7 @@ return {
         -- should disable preselect in cmdline, hitting enter will accept suggestion and not execute command!
         -- This makes it impossible to execute any command, e.g. save the text using :w. Let's use <C-y> for a while...
         ['<CR>'] = { 'accept', 'fallback' },
+        ['<Tab>'] = { 'accept', 'fallback' },
       },
 
       appearance = {
