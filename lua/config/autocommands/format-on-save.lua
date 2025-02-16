@@ -2,8 +2,8 @@ local CommonFormattingOptions = require("lib.core.common-formatting-options")
 
 vim.api.nvim_create_autocmd("BufWritePre", {
   desc = "Format file before saving using LSP capabilities",
-  pattern = "*.{py,lua,rs,cpp,c,proto,js,ts,tsx}",
-  callback = function (_)
+  pattern = "*.{py,lua,rs,cpp,c,proto,js,ts,tsx,css}",
+  callback = function(_)
     -- Event payload:
     -- - id: (number) autocommand id
     -- - event: (string) name of the triggered event `autocmd-events`
@@ -18,7 +18,7 @@ vim.api.nvim_create_autocmd("BufWritePre", {
       timeout_ms = 1500,
       -- https://microsoft.github.io/language-server-protocol/specifications/lsp/3.17/specification/#formattingOptions
       formatting_options = CommonFormattingOptions.formatting_options,
-      filter = function (client)
+      filter = function(client)
         return true
       end
     });
