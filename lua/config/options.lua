@@ -14,6 +14,7 @@ vim.o.shiftwidth = 2
 vim.o.expandtab = true
 vim.o.breakindent = true
 vim.o.smartindent = true
+vim.o.autoindent = true
 
 vim.o.wrap = false
 
@@ -33,3 +34,7 @@ vim.o.ruler = true
 
 vim.o.completeopt = 'menuone,noselect'
 
+-- LazyVim inspired
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+
+vim.opt.grepprg = "rg --vimgrep"
