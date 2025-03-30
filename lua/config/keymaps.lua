@@ -1,5 +1,4 @@
--- vim.g.mapleader = " "
--- vim.keymap.set("n", "<leader>pv", vim.cmd().Ex)
+-- Generic editor keymaps, not plugin / lsp related.
 
 -- <leader>f* is reserved for NvimTree
 -- <leader>e the same
@@ -43,4 +42,3 @@ vim.keymap.set("i", "<A-W>", "<C-o>W", options)
 vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<leader>x", ":.lua<CR>")
 vim.keymap.set("v", "<leader>x", ":lua<CR>")
-
