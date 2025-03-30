@@ -33,3 +33,7 @@ vim.o.ruler = true
 
 vim.o.completeopt = 'menuone,noselect'
 
+-- LazyVim inspired
+-- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+
+vim.opt.grepprg = "rg --vimgrep"
