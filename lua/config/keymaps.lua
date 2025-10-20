@@ -1,3 +1,7 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
 -- Generic editor keymaps, not plugin / lsp related.
 
 -- <leader>f* is reserved for NvimTree
@@ -6,8 +10,8 @@
 -- <leader>p* is reserved for Telescope
 local options = { remap = false }
 
-vim.keymap.set("n", "<C-d>", "<C-d>zz");
-vim.keymap.set("n", "<C-u>", "<C-u>zz");
+vim.keymap.set("n", "<C-d>", "<C-d>zz")
+vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")

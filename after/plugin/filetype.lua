@@ -4,7 +4,6 @@ vim.filetype.add({
     ["Podfile"] = "ruby",
   },
   extension = {
-    podspec = 'ruby',
-  }
+    podspec = "ruby",
+  },
 })
-

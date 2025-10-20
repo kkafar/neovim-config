@@ -1,7 +1,2 @@
--- Setup for nvimtree plugin
--- It requires to disable default netrw file explorer
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
-require("config")
-
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")
