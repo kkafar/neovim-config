@@ -46,3 +46,6 @@ vim.keymap.set("i", "<A-W>", "<C-o>W", options)
 vim.keymap.set("n", "<leader><leader>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<leader>x", ":.lua<CR>")
 vim.keymap.set("v", "<leader>x", ":lua<CR>")
+
+-- Delete certain LazyVim global keymaps
+vim.keymap.del("n", "<leader>p")
