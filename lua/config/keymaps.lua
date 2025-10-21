@@ -48,4 +48,4 @@ vim.keymap.set("n", "<leader>x", ":.lua<CR>")
 vim.keymap.set("v", "<leader>x", ":lua<CR>")
 
 -- Delete certain LazyVim global keymaps
-vim.keymap.del("n", "<leader>p")
+-- vim.keymap.del("n", "<space>p")
