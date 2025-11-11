@@ -18,6 +18,13 @@ return {
             end,
             desc = "Move to prev diagnostic",
           },
+          {
+            "<leader>df",
+            function()
+              vim.diagnostic.open_float()
+            end,
+            desc = "Open float window with diagnostic",
+          },
         },
       },
     },
