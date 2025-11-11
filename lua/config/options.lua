@@ -42,3 +42,5 @@ vim.o.completeopt = "menuone,noselect"
 -- https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
 
 vim.opt.grepprg = "rg --vimgrep"
+
+vim.o.winborder = "rounded"
